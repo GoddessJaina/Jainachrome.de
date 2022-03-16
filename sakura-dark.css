@@ -71,7 +71,8 @@ hr {
 
 a {
   text-decoration: none;
-  color: #ffffff; }
+  color: #d2b48c; 
+  font-size: 130%; }
   a:hover {
     color: #c9c9c9;
     border-bottom: 2px solid #c9c9c9; }
