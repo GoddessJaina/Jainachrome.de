@@ -26,6 +26,26 @@
     background-color: #dddddd;
 }
 
+.Talia_w{}
+.Talia_w::before{
+    background-color: #E03F74;
+}
+
+.Anya_w{}
+.Anya_w::before{
+    background-color: #ffaaee;
+}
+
+.Yarrow{}
+.Yarrow_w::before{
+    background-color: #43551F;
+}
+
+.Ophelia{}
+.Ophelia_w::before{
+    background-color: #E432B1;
+}
+
 .Nina_w{}
 .Nina_w::before{
     background-color: #ffa500;
