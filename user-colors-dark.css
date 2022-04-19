@@ -1,0 +1,32 @@
+.wrap{
+	position: relative;
+	padding-left: 5px;
+}
+.wrap::before{
+	content: '';
+    position: absolute;
+    left: -5%;
+    border-radius: 10px;
+    width: 5px;
+    height: 100%;
+}
+
+.Jaina_w{}
+.Jaina_w::before{
+    background-color: #d2b48c;
+}
+
+.Vera_w{}
+.Vera_w::before{
+    background-color: #2761B2;
+}
+
+.Azu_w{}
+.Azu_w::before{
+    background-color: #dddddd;
+}
+
+.Nina_w{}
+.Nina_w::before{
+    background-color: #ffa500;
+}
