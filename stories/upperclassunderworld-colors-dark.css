@@ -1,0 +1,41 @@
+.wrap{
+	position: relative;
+	padding-left: 5px;
+}
+.wrap::before{
+	content: '';
+    position: absolute;
+    left: -5%;
+    border-radius: 10px;
+    width: 5px;
+    height: 100%;
+}
+
+.Ashley_w{}
+.Ashley_w::before{
+	background-color: #a2a2a2;
+}
+
+.Mania_w{}
+.Mania_w::before{
+	background-color: #ff2400;
+}
+
+.Madrigal_w{}
+.Madrigal_w::before{
+	background-color: #e5dbb9;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #c9c9c9;
+	top: 5%;
+	height: 90%;
+}

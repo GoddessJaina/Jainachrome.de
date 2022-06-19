@@ -1,0 +1,10 @@
+div {
+	width: 85%;
+	border: 5px solid #c9c9c9;
+	padding: 16px;
+	margin: 10px;
+}
+
+p {
+	text-align: left;
+}

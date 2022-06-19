@@ -1,0 +1,36 @@
+.wrap{
+	position: relative;
+	padding-left: 5px;
+}
+.wrap::before{
+	content: '';
+    position: absolute;
+    left: -5%;
+    border-radius: 10px;
+    width: 5px;
+    height: 100%;
+}
+
+.Azriel_w{}
+.Azriel_w::before{
+	background-color: #802000;
+}
+
+.Lucina_w{}
+.Lucina_w::before{
+	background-color: #9ff9ff;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #c9c9c9;
+	top: 5%;
+	height: 90%;
+}

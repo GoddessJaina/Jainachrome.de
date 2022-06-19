@@ -26,27 +26,26 @@
     background-color: #dddddd;
 }
 
-.Talia_w{}
-.Talia_w::before{
-    background-color: #E03F74;
-}
-
-.Anya_w{}
-.Anya_w::before{
-    background-color: #ffaaee;
-}
-
-.Yarrow{}
-.Yarrow_w::before{
-    background-color: #43551F;
-}
-
-.Ophelia{}
-.Ophelia_w::before{
-    background-color: #E432B1;
-}
-
 .Nina_w{}
 .Nina_w::before{
     background-color: #ffa500;
+}
+
+.Jaeeun_w{}
+.Jaeeun_w::before{
+    background-color: #F68357;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #c9c9c9;
+	top: 5%;
+	height: 90%;
 }

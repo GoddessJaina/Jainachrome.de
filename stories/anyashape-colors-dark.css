@@ -11,9 +11,9 @@
     height: 100%;
 }
 
-.Jaina_w{}
-.Jaina_w::before{
-    background-color: #9f763f;
+.Shape_w{}
+.Shape_w::before{
+    background-color: #d2b48c;
 }
 
 .Vera_w{}
@@ -21,32 +21,36 @@
     background-color: #2761B2;
 }
 
-.Azu_w{}
-.Azu_w::before{
-    background-color: #bbbbbb;
-}
-
-.Talia_w{}
-.Talia_w::before{
-    background-color: #E03F74;
-}
-
 .Anya_w{}
 .Anya_w::before{
     background-color: #ffaaee;
 }
 
-.Yarrow{}
+.Yarrow_w{}
 .Yarrow_w::before{
     background-color: #43551F;
 }
 
-.Ophelia{}
+.Ophelia_w{}
 .Ophelia_w::before{
     background-color: #E432B1;
 }
 
-.Nina_w{}
-.Nina_w::before{
-    background-color: #ffa500;
+.Fluffs_w{}
+.Fluffs_w::before{
+    background-color: #98817b;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #c9c9c9;
+	top: 5%;
+	height: 90%;
 }

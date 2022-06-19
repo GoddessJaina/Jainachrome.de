@@ -1,0 +1,41 @@
+.wrap{
+	position: relative;
+	padding-left: 5px;
+}
+.wrap::before{
+	content: '';
+    position: absolute;
+    left: -5%;
+    border-radius: 10px;
+    width: 5px;
+    height: 100%;
+}
+
+.Jaina_w{}
+.Jaina_w::before{
+    background-color: #9f763f;
+}
+
+.Azu_w{}
+.Azu_w::before{
+    background-color: #bbbbbb;
+}
+
+.Anya_w{}
+.Anya_w::before{
+    background-color: #ffaaee;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #4a4a4a;	
+	top: 5%;
+	height: 90%;
+}
