@@ -26,6 +26,26 @@
     background-color: #ffaaee;
 }
 
+.Aurora_w{}
+.Aurora_w::before{
+    background-color: #9ff9ff;
+}
+
+.Aeon_w{}
+.Aeon_w::before{
+    background-color: #666666;
+}
+
+.Athame_w{}
+.Athame_w::before{
+    background-color: #a2a2a2;
+}
+
+.Ema_w{}
+.Ema_w::before{
+    background-color: #a00000;
+}
+
 .vl{
 	position: relative;
 	padding-left: 5px;

@@ -1,0 +1,9 @@
+ul {
+	list-style-type: square;
+}
+
+ul li {
+	margin-left: 32px;
+}
+
+.nooffset {margin-left: 0px;}

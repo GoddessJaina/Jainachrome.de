@@ -1,0 +1,12 @@
+img {
+	position: absolute;
+	width: 24;
+	max-width: 100%; 
+	height: auto;
+	margin-top: 8;
+	margin-left: 16;
+}
+
+.offset1 {margin-left: 48;}
+
+.offset2 {margin-left: 80;}
