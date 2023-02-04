@@ -5,6 +5,10 @@ div {
 	margin: 10px;
 }
 
+h3 {
+	margin-top: -18px;	
+}
+
 p {
 	text-align: left;
 }
