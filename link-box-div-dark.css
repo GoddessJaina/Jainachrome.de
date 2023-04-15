@@ -12,3 +12,7 @@ h3 {
 p {
 	text-align: left;
 }
+
+.dotted {
+	border: 5px dashed #c9c9c9;
+}
