@@ -1,0 +1,46 @@
+.wrap{
+	position: relative;
+	padding-left: 5px;
+}
+.wrap::before{
+	content: '';
+    position: absolute;
+    left: -5%;
+    border-radius: 10px;
+    width: 5px;
+    height: 100%;
+}
+
+.StreetMaddie_w{}
+.StreetMaddie_w::before{
+	background-color: #8A403D;
+}
+
+.Vera_w{}
+.Vera_w::before{
+    background-color: #2761B2;
+}
+
+.Reese_w{}
+.Reese_w::before{
+	background-color: #01735C;
+}
+
+.Caroline_w{}
+.Caroline_w::before{
+	background-color: #E26310;
+}
+
+.vl{
+	position: relative;
+	padding-left: 5px;
+}
+
+.vl::before{
+	content: '';
+	position: absolute;
+    left: -5%;
+	border-right: 5px dashed #c9c9c9;	
+	top: 5%;
+	height: 90%;
+}
