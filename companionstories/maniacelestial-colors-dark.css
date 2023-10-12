@@ -11,14 +11,24 @@
     height: 100%;
 }
 
-.Clyde_w{}
-.Clyde_w::before{
-	background-color: #ffc1cc;
+.HopefulMaddie_w{}
+.HopefulMaddie_w::before{
+	background-color: #FFFFBF;
 }
 
-.Nebula_w{}
-.Nebula_w::before{
-	background-color: #37305c;
+.Mania_w{}
+.Mania_w::before{
+	background-color: #ff2400;
+}
+
+.Bonewagon_w{}
+.Bonewagon_w::before{
+	background-color: #000080;
+}
+
+.Gideon_w{}
+.Gideon_w::before{
+	background-color: #708090;
 }
 
 .vl{
