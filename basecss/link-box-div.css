@@ -1,6 +1,7 @@
 div {
+	position: relative;
 	width: 85%;
-	border: 5px solid #4a4a4a;
+	border: 5px solid #cacaca;
 	padding: 16px;
 	margin: 10px;
 }
@@ -12,7 +13,15 @@ h3 {
 p {
 	text-align: left;
 }
+  
+.stamp {
+	position: absolute;
+	top: -8%;
+	right: -8%;
+	max-width: 40%;
+	max-height: 40%
+}
 
 .dotted {
-	border: 5px dashed #4a4a4a;
+	border: 5px dashed #cacaca;
 }
