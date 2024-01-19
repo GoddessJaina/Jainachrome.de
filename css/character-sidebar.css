@@ -1,0 +1,255 @@
+/*
+    Dark and Light Mode Colors
+*/
+
+:root {
+  --jaina: #d2b48c;
+  --azu: #bbbbbb;
+  --anya: #ffaaee;
+  --aurora: #9ff9ff;
+  --aeon: #666666;
+  --athame: #a2a2a2;
+  --ema: #a00000;
+  --tempest: #000000;
+  --vera: #2761b2;
+  --nina: #ffa500;
+  --jaeeun: #f68357;
+  --mania: #ff2400;
+  --madrigal: #e5dbb9;
+  --talia: #e03f74;
+  --azriel: #802000;
+  --clyde: #ffc1cc;
+  --nebula: #37305c;
+  --yarrow: #43551f;
+  --ophelia: #e432b1;
+  --fluffs: #98817b;
+  --hopefulmaddie: #ffffbf;
+  --bonewagon: #000080;
+  --gideon: #708090;
+  --streetmaddie: #8a403d;
+  --reese: #01735c;
+  --caroline: #e26310;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --hopefulmaddie: #ffe866;
+  }
+}
+
+/*
+    Normal Character Formatting
+*/
+
+.wrap {
+  position: relative;
+  padding-left: 5px;
+}
+.wrap::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  border-radius: 10px;
+  width: 5px;
+  height: 100%;
+}
+
+/*
+    Generic Character Formatting
+*/
+
+.Generic_w {
+  position: relative;
+  padding-left: 5px;
+}
+.Generic_w::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  border-right: 5px dashed;
+  border-color: var(--font-color);
+  top: 5%;
+  height: 90%;
+}
+
+/*
+    Jaina and Monochrome
+*/
+
+.Jaina_w {
+}
+.Jaina_w::before {
+  background-color: var(--jaina);
+}
+
+.Azu_w {
+}
+.Azu_w::before {
+  background-color: var(--azu);
+}
+
+.Anya_w {
+}
+.Anya_w::before {
+  background-color: var(--anya);
+}
+
+.Aurora_w {
+}
+.Aurora_w::before {
+  background-color: var(--aurora);
+}
+
+.Aeon_w {
+}
+.Aeon_w::before {
+  background-color: var(--aeon);
+}
+
+.Athame_w {
+}
+.Athame_w::before {
+  background-color: var(--athame);
+}
+
+.Ema_w {
+}
+.Ema_w::before {
+  background-color: var(--ema);
+}
+
+.Tempest_w {
+}
+.Tempest_w::before {
+  background-color: var(--tempest);
+}
+
+/*
+    Original Characters
+*/
+
+.Vera_w {
+}
+.Vera_w::before {
+  background-color: var(--vera);
+}
+
+.Shape_w {
+}
+.Shape_w::before {
+  background-color: var(--jaina);
+}
+
+.Nina_w {
+}
+.Nina_w::before {
+  background-color: var(--nina);
+}
+
+.Jaeeun_w {
+}
+.Jaeeun_w::before {
+  background-color: var(--jaeeun);
+}
+
+.Ashley_w {
+}
+.Ashley_w::before {
+  background-color: var(--athame);
+}
+
+.Mania_w {
+}
+.Mania_w::before {
+  background-color: var(--mania);
+}
+
+.Madrigal_w {
+}
+.Madrigal_w::before {
+  background-color: var(--madrigal);
+}
+
+.Talia_w {
+}
+.Talia_w::before {
+  background-color: var(--talia);
+}
+
+.Azriel_w {
+}
+.Azriel_w::before {
+  background-color: var(--azriel);
+}
+
+.Lucina_w {
+}
+.Lucina_w::before {
+  background-color: var(--aurora);
+}
+
+.Clyde_w {
+}
+.Clyde_w::before {
+  background-color: var(--clyde);
+}
+
+.Nebula_w {
+}
+.Nebula_w::before {
+  background-color: var(--nebula);
+}
+
+.Yarrow_w {
+}
+.Yarrow_w::before {
+  background-color: var(--yarrow);
+}
+
+.Ophelia_w {
+}
+.Ophelia_w::before {
+  background-color: var(--ophelia);
+}
+
+.Fluffs_w {
+}
+.Fluffs_w::before {
+  background-color: var(--fluffs);
+}
+
+.HopefulMaddie_w {
+}
+.HopefulMaddie_w::before {
+  background-color: var(--hopefulmaddie);
+}
+
+.Bonewagon_w {
+}
+.Bonewagon_w::before {
+  background-color: var(--bonewagon);
+}
+
+.Gideon_w {
+}
+.Gideon_w::before {
+  background-color: var(--gideon);
+}
+
+.StreetMaddie_w {
+}
+.StreetMaddie_w::before {
+  background-color: var(--streetmaddie);
+}
+
+.Reese_w {
+}
+.Reese_w::before {
+  background-color: var(--reese);
+}
+
+.Caroline_w {
+}
+.Caroline_w::before {
+  background-color: var(--caroline);
+}
