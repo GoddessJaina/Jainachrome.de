@@ -41,6 +41,21 @@
   margin: 10px;
 }
 
+.link-box.horizontal-layout {
+  display: flex;
+  justify-content: space-between; /* this will add equal space between each item */
+}
+
+.chapter {
+  font-size: 150%;
+}
+
+.chapter.current {
+  border-color: var(
+    --link-color
+  ); /* Update border color for the current link */
+}
+
 .link-box.dashed {
   border-style: dashed;
 }
@@ -188,10 +203,12 @@ a {
   text-decoration: none;
   color: var(--link-color);
   font-size: 130%;
+  border-bottom: 2px solid transparent; /* prevents jittering link box */
+  transition: border-color 0.2s; /* Add transition for a smooth effect */
 }
 a:hover {
   color: var(--font-color);
-  border-bottom: 2px solid var(--font-color);
+  border-bottom-color: var(--font-color);
 }
 
 ul {
