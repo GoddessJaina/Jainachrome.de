@@ -14,6 +14,8 @@
   --link-color: #d2b48c;
   --block-code-color: #4a4a4a;
   --enabled-btn-color: #c9c9c9;
+  --completed-story-changelog-color: #34b233;
+  --non-story-changelog-color: #a3a3a3;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,6 +27,7 @@
     --link-color: #9f763f;
     --block-code-color: #f1f1f1;
     --enabled-btn-color: #982c61;
+    --non-story-changelog-color: #7a7a7a;
   }
 }
 
@@ -80,8 +83,16 @@
   list-style-type: none;
 }
 
-.no-offset {
+.date-list-entry {
   margin-left: 0px;
+}
+
+.story {
+  color: var(--font-color);
+}
+
+.completedstory {
+  color: var(--completed-story-changelog-color);
 }
 
 /* 
@@ -215,11 +226,14 @@ ul {
   list-style-type: square;
   padding-left: 1.4em;
   margin-top: 0px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--non-story-changelog-color);
 }
 
 li {
-  margin-bottom: 0.4em;
+  margin: 0px;
+  padding: 0.2em;
+  line-height: 1em;
 }
 
 ul li {

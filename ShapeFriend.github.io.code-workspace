@@ -1,8 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../../My Drive/Website"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "ShapeFriend.github.io"
+  }
 }

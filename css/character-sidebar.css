@@ -29,6 +29,9 @@
   --streetmaddie: #8a403d;
   --reese: #01735c;
   --caroline: #e26310;
+  --irina: #d0db61;
+  --sen: #1f493d;
+  --lucy: #86cecb;
 }
 
 @media (prefers-color-scheme: light) {
@@ -252,4 +255,22 @@
 }
 .Caroline_w::before {
   background-color: var(--caroline);
+}
+
+.Irina_w {
+}
+.Irina_w::before {
+  background-color: var(--irina);
+}
+
+.Sen_w {
+}
+.Sen_w::before {
+  background-color: var(--sen);
+}
+
+.Lucy_w {
+}
+.Lucy_w::before {
+  background-color: var(--lucy);
 }
