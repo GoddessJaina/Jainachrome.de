@@ -32,11 +32,15 @@
   --irina: #d0db61;
   --sen: #1f493d;
   --lucy: #86cecb;
+  --keria: #7da27e;
+  --subjectmaddie: #f5f5f5;
+  --ruedi: #6a3717;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --hopefulmaddie: #ffe866;
+    --subjectmaddie: #d0d0c3;
   }
 }
 
@@ -273,4 +277,22 @@
 }
 .Lucy_w::before {
   background-color: var(--lucy);
+}
+
+.Keria_w {
+}
+.Keria_w::before {
+  background-color: var(--keria);
+}
+
+.SubjectMaddie_w {
+}
+.SubjectMaddie_w::before {
+  background-color: var(--subjectmaddie);
+}
+
+.Ruedi_w {
+}
+.Ruedi_w::before {
+  background-color: var(--ruedi);
 }
