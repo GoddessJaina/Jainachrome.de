@@ -49,6 +49,25 @@
   justify-content: space-between; /* this will add equal space between each item */
 }
 
+.gallery-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: -20%;
+  margin-right: -20%;
+}
+
+.gallery-item p {
+  margin-top: 10%;
+  padding: 20px;
+  text-align: left;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  max-width: 500px; /* adjust as needed! */
+}
+
 .chapter {
   font-size: 150%;
 }
