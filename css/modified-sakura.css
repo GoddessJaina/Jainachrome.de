@@ -32,7 +32,43 @@
 }
 
 /* 
-	  Link Box Formatting
+	  Stars and Moon Formatting
+*/
+
+.star {
+  position: absolute;
+  width: 24;
+  max-width: 100%;
+  height: auto;
+  margin-top: 8;
+  margin-left: 16;
+}
+
+.star.offset1 {
+  margin-left: 48;
+}
+
+.star.offset2 {
+  margin-left: 80;
+}
+
+/* 
+    Kira spoiler text TEST 
+*/
+
+.spoiler,
+.spoiler a {
+  color: --font-color;
+  background-color: --font-color;
+}
+
+.spoiler:hover,
+.spoiler:hover a {
+  color: --bg-color;
+}
+
+/* 
+	  Link Boxes and Divs
 */
 
 .link-box {
@@ -113,25 +149,14 @@
 }
 
 /* 
-	  Stars and Moon Formatting
+    ===============================
+    ===============================
+
+      GENERAL STYLE FEATURES
+
+    ===============================
+    ===============================
 */
-
-.star {
-  position: absolute;
-  width: 24;
-  max-width: 100%;
-  height: auto;
-  margin-top: 8;
-  margin-left: 16;
-}
-
-.star.offset1 {
-  margin-left: 48;
-}
-
-.star.offset2 {
-  margin-left: 80;
-}
 
 /* 
     Body 
@@ -280,7 +305,7 @@ video {
 }
 
 /*
-    Pre and Code
+    Pre and code
 */
 
 pre {
@@ -307,7 +332,10 @@ pre > code {
   font-size: 1em;
 }
 
-/* Tables */
+/* 
+    Tables 
+*/
+
 table {
   text-align: justify;
   width: 100%;
@@ -408,19 +436,4 @@ fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-}
-
-/* 
-    Kira spoiler text TEST 
-*/
-
-.spoiler,
-.spoiler a {
-  color: black;
-  background-color: black;
-}
-
-.spoiler:hover,
-.spoiler:hover a {
-  color: white;
 }
