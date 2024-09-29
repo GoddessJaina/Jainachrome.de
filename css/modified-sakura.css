@@ -333,7 +333,7 @@ textarea:focus {
   border: 1px solid var(--highlight-color);
 }
 
-textarea {||It was trying to find a way to push e
+textarea {
   width: 100%;
 }
 
@@ -413,6 +413,7 @@ fieldset {
 /* 
     Kira spoiler text TEST 
 */
+
 .spoiler,
 .spoiler a {
   color: black;
