@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/character.css" type="text/css" media="screen" />
+    <title>Tests / characters</title>
+    <style>
+      .compare {
+        display: flex;
+        width: 200%;
+        align-self: center;
+        gap: 0.5rem;
+      }
+
+      .compare > main {
+        background-color: var(--background);
+        color: var(--text);
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <template id="scene">
+      <section class="scene">
+        <div class="meta"></div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+            pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+            pellentesque sem placerat.
+          </p>
+        </div>
+      </section>
+    </template>
+    <main data-theme="dark">
+      <h1>test #characters</h1>
+      <div class="compare">
+        <script>
+          const AddScene = (() => {
+            const template = document.getElementById("scene");
+
+            return (parent, actors = []) => {
+              const clone = template.content.cloneNode(true);
+              const meta = clone.querySelector(".meta");
+              const content = clone.querySelector(".content");
+
+              actors.forEach((name) => {
+                const metafor = document.createElement("div"); // :)
+                metafor.dataset["for"] = name;
+                meta.appendChild(metafor);
+
+                const who = document.createElement("p");
+                who.innerText = `- ${name}`;
+                content.appendChild(who);
+              });
+
+              parent.appendChild(clone);
+            };
+          })();
+
+          const rules = [...document.styleSheets].flatMap((sheet) => [...sheet.cssRules]);
+
+          const reg = /^\[data-for=\"(.*?)\"\]$/;
+          const datasetForRules = rules
+            .map((r) => r.selectorText?.match(reg))
+            .filter((r) => r != null)
+            .map((r) => r[1]);
+
+          const parent = document.currentScript.parentElement;
+          const views = ["light", "dark"].map((theme) => {
+            const view = document.createElement("main");
+            view.dataset["theme"] = theme;
+            return view;
+          });
+          views.forEach((view) => {
+            parent.appendChild(view);
+            datasetForRules.forEach((name) => AddScene(view, [name]));
+          });
+        </script>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

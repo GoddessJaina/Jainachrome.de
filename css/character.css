@@ -1,0 +1,193 @@
+/*
+  Dark and Light Mode Colors
+*/
+
+:root {
+  color-scheme: light dark;
+
+  --jaina: #d2b48c;
+  --azu: #bbbbbb;
+  --anya: #ffaaee;
+  --aurora: #9ff9ff;
+  --aeon: #666666;
+  --athame: #a2a2a2;
+  --ema: #a00000;
+  --tempest: #000000;
+  --vera: #2761b2;
+  --nina: #ffa500;
+  --jaeeun: #f68357;
+  --mania: #ff2400;
+  --madrigal: #e5dbb9;
+  --talia: #e03f74;
+  --azriel: #802000;
+  --clyde: #ffc1cc;
+  --nebula: #37305c;
+  --yarrow: #43551f;
+  --ophelia: #e432b1;
+  --fluffs: #98817b;
+  --hopefulmaddie: #ffffbf;
+  --bonewagon: #000080;
+  --gideon: #708090;
+  --streetmaddie: #8a403d;
+  --reese: #01735c;
+  --caroline: #e26310;
+  --irina: #d0db61;
+  --sen: #1f493d;
+  --lucy: #86cecb;
+  --keria: #7da27e;
+  --subjectmaddie: #f5f5f5;
+  --ruedi: #6a3717;
+}
+
+/* Attempt to auto adjust color for light theme */
+[data-for] {
+  --color: light-dark(oklch(from var(--color-raw) calc(l * 0.8) calc(c * 1.4) h), var(--color-raw));
+}
+
+/*
+  Jaina and Monochrome
+*/
+
+[data-for="Jaina"] {
+  --color-raw: var(--jaina);
+}
+
+[data-for="Azu"] {
+  --color-raw: var(--azu);
+}
+
+[data-for="Anya"] {
+  --color-raw: var(--anya);
+}
+
+[data-for="Aurora"] {
+  --color-raw: var(--aurora);
+}
+
+[data-for="Aeon"] {
+  --color-raw: var(--aeon);
+}
+
+[data-for="Athame"] {
+  --color-raw: var(--athame);
+}
+
+[data-for="Ema"] {
+  --color-raw: var(--ema);
+}
+
+[data-for="Tempest"] {
+  --color-raw: var(--tempest);
+}
+
+/*
+  Original Characters
+*/
+
+[data-for="Vera"] {
+  --color-raw: var(--vera);
+}
+
+[data-for="Shape"] {
+  --color-raw: var(--jaina);
+}
+
+[data-for="Nina"] {
+  --color-raw: var(--nina);
+}
+
+[data-for="Jaeeun"] {
+  --color-raw: var(--jaeeun);
+}
+
+[data-for="Ashley"] {
+  --color-raw: var(--athame);
+}
+
+[data-for="Mania"] {
+  --color-raw: var(--mania);
+}
+
+[data-for="Madrigal"] {
+  --color-raw: var(--madrigal);
+}
+
+[data-for="Talia"] {
+  --color-raw: var(--talia);
+}
+
+[data-for="Azriel"] {
+  --color-raw: var(--azriel);
+}
+
+[data-for="Lucina"] {
+  --color-raw: var(--aurora);
+}
+
+[data-for="Clyde"] {
+  --color-raw: var(--clyde);
+}
+
+[data-for="Nebula"] {
+  --color-raw: var(--nebula);
+}
+
+[data-for="Yarrow"] {
+  --color-raw: var(--yarrow);
+}
+
+[data-for="Ophelia"] {
+  --color-raw: var(--ophelia);
+}
+
+[data-for="Fluffs"] {
+  --color-raw: var(--fluffs);
+}
+
+[data-for="HopefulMaddie"] {
+  --color-raw: var(--hopefulmaddie);
+}
+
+[data-for="Bonewagon"] {
+  --color-raw: var(--bonewagon);
+}
+
+[data-for="Gideon"] {
+  --color-raw: var(--gideon);
+}
+
+[data-for="StreetMaddie"] {
+  --color-raw: var(--streetmaddie);
+}
+
+[data-for="Reese"] {
+  --color-raw: var(--reese);
+}
+
+[data-for="Caroline"] {
+  --color-raw: var(--caroline);
+}
+
+[data-for="Irina"] {
+  --color-raw: var(--irina);
+}
+
+[data-for="Sen"] {
+  --color-raw: var(--sen);
+}
+
+[data-for="Lucy"] {
+  --color-raw: var(--lucy);
+}
+
+[data-for="Keria"] {
+  --color-raw: var(--keria);
+}
+
+[data-for="SubjectMaddie"] {
+  --color-raw: var(--subjectmaddie);
+}
+
+[data-for="Ruedi"] {
+  --color-raw: var(--ruedi);
+}

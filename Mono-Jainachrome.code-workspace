@@ -1,13 +1,13 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": ".",
     },
     {
-      "path": "../../Obsidian Vault/Jainachrome"
-    }
+      "path": "../../Obsidian Vault/Jainachrome",
+    },
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "ShapeFriend.github.io"
-  }
+    "liveServer.settings.multiRootWorkspaceName": "ShapeFriend.github.io",
+  },
 }

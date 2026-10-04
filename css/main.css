@@ -1,0 +1,376 @@
+/* colors */
+:root {
+  color-scheme: light dark;
+
+  --text: light-dark(#4a4a4a, #c9c9c9);
+  --background: light-dark(#f9f9f9, #222222);
+  --navigation: light-dark(#9f763f, #d2b48c);
+
+  /* --card: color-mix(in oklab, var(--background), var(--text) 4%); */
+  --card: light-dark(#d9d9d9, #282828);
+
+  --success: #34b233;
+  --error: #cb4c4e;
+  --progress: #e37d31;
+
+  --border: light-dark(#c1c1c1, #444444);
+}
+
+/* layout */
+:root {
+  --border-radius: 0.5rem;
+  --meta-decorator-size: 1rem;
+  --content-min-padding: 1lh;
+  --line-height: 1.618;
+}
+
+[data-theme="system"] {
+  color-scheme: light dark;
+}
+[data-theme="light"] {
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline-flex;
+  gap: 0.5em;
+}
+
+a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--text);
+  gap: 0.25em;
+}
+a[href] {
+  align-items: center;
+  position: relative;
+  color: var(--navigation);
+  transition: color 0.1s ease-out;
+}
+a[href]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -1px;
+  background-color: currentColor;
+  transition: width 0.1s ease-out;
+}
+a[href]:hover {
+  color: var(--text);
+}
+a[href]:hover::after {
+  width: 100%;
+}
+
+li {
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  line-height: var(--line-height, 1.618);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header * {
+  display: flex;
+}
+header nav {
+  justify-content: space-between;
+  padding: 0.5em;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+}
+header li {
+  padding: 0 0.5em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-self: center;
+  max-width: 38rem;
+  width: 100%;
+
+  gap: 0.5rem;
+}
+main > * {
+  margin-inline: 0.5rem;
+}
+
+footer {
+  padding: 0.5rem;
+}
+footer::before {
+  content: "\00a9  2026 jainachrome.de";
+  display: block;
+}
+
+nav ul {
+  padding: 0;
+}
+
+.compact > :not(:last-child) {
+  margin-bottom: 0;
+}
+.compact > :not(:first-child) {
+  margin-top: 0;
+}
+
+[data-status="done"] {
+  --color: var(--success);
+}
+[data-status="progress"] {
+  --color: var(--progress);
+}
+[data-status="error"] {
+  --color: var(--error);
+}
+
+.disclaimer {
+  color: var(--error);
+}
+
+.card,
+.scene {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card);
+  border-radius: var(--border-radius);
+}
+
+.card {
+  outline: 1px solid var(--border);
+}
+
+.notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: grid;
+  place-content: center;
+
+  aspect-ratio: 1/1;
+  transform: rotateZ(45deg) translate(0%, -40%);
+
+  pointer-events: none;
+}
+:has(> .notice) {
+  position: relative;
+}
+.notice > :first-child {
+  outline: 0.2rem solid var(--color, var(--progress));
+  outline-offset: 0.1rem;
+
+  background-color: var(--color, var(--progress));
+  color: var(--card);
+  padding: 0 4rem;
+}
+
+.chapters * {
+  display: flex;
+}
+.chapters ul {
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.chapters ul > li {
+  margin: 0 0.2em;
+}
+.chapters a {
+  width: 1lh;
+  justify-content: center;
+}
+
+.current {
+  background-color: var(--card);
+  outline: 1px solid var(--border);
+}
+.current::after {
+  width: 100% !important;
+}
+
+/* Make `.meta` invisible by default */
+.meta {
+  display: none;
+}
+
+/*
+ * Use the saved `--color` as background color if inside `.meta`.
+ * Grow element into flexbox.
+ */
+.meta [data-for] {
+  background-color: var(--color);
+  flex-grow: 1;
+}
+
+/* Show `.meta` if directly inside `.card` or `.scene` */
+.card > .meta,
+.scene > .meta {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--meta-decorator-size, 0);
+}
+
+/*
+ * Add minimum space above and below "content" body.
+ * Applies to `.content`.
+ * Ignores directly nested `.content` as this allows for more flexibility in html design.
+ *
+ * <div class="content"> ... </div>
+ * ^
+ * 
+ * <section class="scene content"> ... </section>
+ * ^
+ *
+ * <section class="scene content"> <div class="content"> ... </div> </section>
+ * ^                               x (ignored)
+ */
+:not(.content) > .content::before,
+:not(.content) > .content::after {
+  content: "";
+  display: block;
+  margin: var(--content-min-padding, 1em) 0;
+}
+
+/*
+ * Add space left and right of "content" body.
+ * Applies to `.content`.
+ * Ignores directly nested `.content` as this allows for more flexibility in html design.
+ *
+ * <div class="content"> ... </div>
+ * ^
+ * 
+ * <section class="scene content"> ... </section>
+ * ^
+ *
+ * <section class="scene content"> <div class="content"> ... </div> </section>
+ * ^                               x (ignored)
+ */
+:not(.content) > .content {
+  padding: 0 var(--content-min-padding, 1em);
+}
+
+/* Adds extra left padding if `.meta` directly inside or sibling of `.content`. */
+:not(.content) > .content:has(> .meta),
+:not(.content):has(> .meta) > .content {
+  padding-left: calc(var(--content-min-padding, 1em) + var(--meta-decorator-size, 0));
+}
+
+.home::before {
+  content: "";
+  display: block;
+  background-image: url("/android-chrome-512x512.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+[data-icon] {
+  display: inline-block;
+  height: 1lh;
+  width: 1lh;
+
+  mask-image: var(--icon-url);
+  background-color: var(--color, white);
+}
+
+[data-icon="moon"] {
+  --icon-url: url("/assets/svg/moon.svg");
+  --color: var(--jaina, #d2b48c);
+}
+[data-icon="star"] {
+  --icon-url: url("/assets/svg/star.svg");
+  --color: light-dark(#000, #fff);
+}
+[data-icon="star-filled"] {
+  --icon-url: url("/assets/svg/star-filled.svg");
+}
+
+.gallery {
+  display: grid;
+  gap: 1lh;
+  align-self: center;
+  min-width: 50vw;
+  width: 100%;
+}
+.gallery > article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gallery > article:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.gallery > article img {
+  width: 100%;
+  height: 100%;
+
+  min-width: 30vw;
+  max-height: 50vh;
+
+  object-fit: contain;
+}
+.gallery > article > .content {
+  display: inline-block;
+  background-color: color-mix(in oklab, var(--background), transparent 30%);
+}
+
+@media (max-width: 860px) {
+  :root {
+    --border-radius: 0.36rem;
+    --meta-decorator-size: 0.68rem;
+    --content-min-padding: 0.8lh;
+    --line-height: 1.4;
+  }
+
+  .gallery > article {
+    flex-direction: column !important;
+  }
+  .gallery > article > .content {
+    max-width: 100%;
+  }
+}
