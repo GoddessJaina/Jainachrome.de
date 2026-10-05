@@ -7,7 +7,7 @@
   --navigation: light-dark(#9f763f, #d2b48c);
 
   /* --card: color-mix(in oklab, var(--background), var(--text) 4%); */
-  --card: light-dark(#d9d9d9, #282828);
+  --card: light-dark(#f0f0f0, #272727);
 
   --success: #34b233;
   --error: #cb4c4e;
@@ -23,8 +23,7 @@
   --content-min-padding: 1lh;
   --line-height: 1.618;
 }
-
-[data-theme="system"] {
+s [data-theme="system"] {
   color-scheme: light dark;
 }
 [data-theme="light"] {
@@ -126,11 +125,13 @@ main {
   align-self: center;
   max-width: 38rem;
   width: 100%;
-
-  gap: 0.5rem;
+  gap: 1lh;
 }
 main > * {
   margin-inline: 0.5rem;
+}
+main:has(.scene) {
+  gap: 0.5rem;
 }
 
 footer {
@@ -176,6 +177,9 @@ nav ul {
 
 .card {
   outline: 1px solid var(--border);
+}
+.biglinks {
+  font-size: 1.3em;
 }
 
 .notice {
@@ -356,7 +360,7 @@ nav ul {
 }
 .gallery > article > .content {
   display: inline-block;
-  background-color: color-mix(in oklab, var(--background), transparent 30%);
+  background-color: var(--card);
 }
 
 @media (max-width: 860px) {
