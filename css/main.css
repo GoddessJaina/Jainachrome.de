@@ -23,7 +23,8 @@
   --content-min-padding: 1lh;
   --line-height: 1.618;
 }
-s [data-theme="system"] {
+
+[data-theme="system"] {
   color-scheme: light dark;
 }
 [data-theme="light"] {
@@ -49,12 +50,15 @@ a {
   color: var(--text);
   gap: 0.25em;
 }
+summary,
 a[href] {
   align-items: center;
   position: relative;
   color: var(--navigation);
   transition: color 0.1s ease-out;
+  cursor: pointer;
 }
+summary::after,
 a[href]::after {
   content: "";
   display: block;
@@ -65,9 +69,13 @@ a[href]::after {
   background-color: currentColor;
   transition: width 0.1s ease-out;
 }
+details[open] > summary,
+summary:hover,
 a[href]:hover {
   color: var(--text);
 }
+details[open] > summary::after,
+summary:hover::after,
 a[href]:hover::after {
   width: 100%;
 }
@@ -136,6 +144,7 @@ main:has(.scene) {
 
 footer {
   padding: 0.5rem;
+  padding-top: 1lh;
 }
 footer::before {
   content: "\00a9  2026 jainachrome.de";
@@ -144,6 +153,11 @@ footer::before {
 
 nav ul {
   padding: 0;
+}
+
+.date-list-type {
+  padding: 0;
+  margin-block: 0;
 }
 
 .compact > :not(:last-child) {
@@ -308,6 +322,12 @@ nav ul {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  
+  /* filter:
+    drop-shadow( .8px  .0px black)
+    drop-shadow(-.8px  .0px black)
+    drop-shadow( .0px  .8px black)
+    drop-shadow( .0px -.8px black); */
 
   height: 100%;
   aspect-ratio: 1/1;
@@ -377,4 +397,19 @@ nav ul {
   .gallery > article > .content {
     max-width: 100%;
   }
+}
+
+details[open]::details-content {
+  position: absolute;
+  top: calc(1lh + 16px);
+  left: 0;
+  width: 100vw;
+}
+
+details[open] ul {
+  display: grid;
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5em;
+  padding-top: 0;
 }
