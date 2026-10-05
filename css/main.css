@@ -318,7 +318,7 @@ nav ul {
 .home::before {
   content: "";
   display: block;
-  background-image: url("/android-chrome-512x512.png");
+  background-image: url("/assets/img/jainachrome-icon.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
