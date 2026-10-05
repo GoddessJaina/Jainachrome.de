@@ -322,12 +322,6 @@ nav ul {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  
-  /* filter:
-    drop-shadow( .8px  .0px black)
-    drop-shadow(-.8px  .0px black)
-    drop-shadow( .0px  .8px black)
-    drop-shadow( .0px -.8px black); */
 
   height: 100%;
   aspect-ratio: 1/1;
@@ -403,7 +397,7 @@ details[open]::details-content {
   position: absolute;
   top: calc(1lh + 16px);
   left: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 details[open] ul {
