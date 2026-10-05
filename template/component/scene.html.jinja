@@ -1,0 +1,8 @@
+<section class="scene content">
+  <div class="meta">
+    {% for actor in actors %}
+    <div data-for="{{ actor }}"></div>
+    {% endfor %}
+  </div>
+  <div class="content">{% block content %} {% endblock %}</div>
+</section>

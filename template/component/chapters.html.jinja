@@ -1,0 +1,11 @@
+<nav class="chapters" aria-label="Chapters">
+  <ul>
+    {% for chapter in chapters %}
+    <li>
+      <a {% if request.endpoint=="chapter.href" -%}
+        class="current" aria-current="page"
+      {%- endif %} href="{{ chapter.href }}">{{ loop.index }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
